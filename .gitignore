@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Don’t commit uploaded files into your repository!
+public/uploads
