@@ -52,4 +52,6 @@ RSpec.configure do |config|
   # Include Warden module for Auth tests
   config.include Warden::Test::Helpers, type: :feature
   config.after(type: :feature) { Warden.test_reset! }
+  
+  config.include Devise::TestHelpers, type: :controller
 end
