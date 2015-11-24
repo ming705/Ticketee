@@ -41,7 +41,7 @@ gem "devise", "~> 3.4.1"
 gem 'pundit', '~> 0.3.0'
 gem "carrierwave", "~> 0.10.0"
 gem "searcher", github: "radar/searcher"
-gem "fog", "~> 1.29.0"
+gem "fog", "~> 1.36.0"
 gem "rails_12factor", group: :production
 # Better web server
 gem "puma", group: :production
