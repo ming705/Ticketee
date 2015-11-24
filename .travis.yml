@@ -1,5 +1,6 @@
 language: ruby
 rvm: 2.2.1
+script: bundle exec rake db:migrate RAILS_ENV=test
 script: bundle exec rspec
 before_install:
 - export DISPLAY=:99.0
