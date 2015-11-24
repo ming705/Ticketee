@@ -1,8 +1,15 @@
 language: ruby
 rvm: 2.2.1
-script: 
-  - bundle exec rake db:migrate RAILS_ENV=test
-  - bundle exec rspec
+script:
+- bundle exec rake db:migrate RAILS_ENV=test
+- bundle exec rspec
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: HlhBguTdT8/odhFTjWHIQILZjt9kmVi1OjPpsyLmY9FJ4xYyXbo0RE8kP1elzTLJdqYYixwqQdL6yHGd9++jXhe891aerP2Ybfw7zCGaB41nKDfxTaenmoS1ggYY6j4WTr1KtnKx6ie0yNflkou/GfAWzwIIBv67BiU4wK3a6XiWcd7RK2Xl0xSyfoslc9X5H8iJG+gR8frxc2Tv41zamJoXUp/p+zvlCJdiL/a571DTTgiz8y9wdIqSMDcNOjHODSXTTBHUnig3DjSVokgVA5OaN07hOhiqJ67P4c/IC7diCuOE7w9rLhupixsxy2p1ceCA8yqBZjaSPwtndZW5iEHO9c5szCR5mX5AjxB+Jq3+GvdWcX72kkrKq5LwI0A1XO9Od6v7pp7hh7ep3ML0j+fAJ2Obe44F4P4h5bg+HBIPTUX3KG5whhDUJ09AOWR32dTLLdCKefJthRVHPpY+t5gzwpE/C1PARy5KBbRPT/6PXaDzIkuiAh08a8pdYE5hlbxnEYgVt0UhYfbct6bpu4qMPZwsXR5tiuW/YbdfIP8HcGA/rAJSb+mngV53NV5daY7kpnr4bIq5u/z1HcTnbc0JkLAe3KzwHzI3dHtHL/x0oshXX8M80fpY6162ZDJbBdLboiyArM2ZPQwxxCVVTjx75o3513aTw7u1fCWWtaw=
+  app: mysterious-retreat-6105
+  on:
+    repo: ming705/Ticketee
